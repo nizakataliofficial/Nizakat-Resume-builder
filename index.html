@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="no-print">
+        <h1>Resume Builder</h1>
+        <button id="downloadBtn" class="downloadBtn">Download PDF</button>
+    </header>
+
+    <main class="builder-container">
+        <!-- FORM SECTION -->
+        <section class="form-section no-print">
+            <h2>Personal Details</h2>
+            <input type="text" id="nameInput" placeholder="Full Name"/>
+            <input type="text" id="titleInput" placeholder="Professional Title"/>
+            <input type="email" id="emailInput" placeholder="Email Address"/>
+            <input type="text" id="phoneInput" placeholder="Phone Number"/>
+            <input type="text" id="githubInput" placeholder="GitHub Profile Link"/>
+            <input type="text" id="linkedinInput" placeholder="LinkedIn Profile Link"/>
+
+            <h2>Summary</h2>
+            <textarea id="summaryInput" placeholder="Brief Professional Summary..."></textarea>
+
+            <h2>Skills</h2>
+            <input type="text" id="skillsInput" placeholder="HTML5, CSS3, JavaScript, Git (Comma separated)"/>
+
+            <!-- DYNAMIC EDUCATION SECTION -->
+            <h2>Education</h2>
+            <div id="educationInputsContainer"></div>
+            <button type="button" id="addEduBtn" class="add-btn">+ Add Education</button>
+
+            <!-- DYNAMIC WORK EXPERIENCE SECTION -->
+            <h2>Work Experience</h2>
+            <div id="experienceInputsContainer"></div>
+            <button type="button" id="addExpBtn" class="add-btn">+ Add Experience</button>
+        </section>
+
+        <!-- LIVE PREVIEW SECTION -->
+        <section class="preview-section" id="resumePreview">
+            <div class="resume-header">
+                <h1 id="displayName">Nizakat Ali</h1>
+                <p id="displayTitle" class="job-title">Frontend Web Developer</p>
+                <div class="contact-info">
+                    <span id="displayEmail">nizakat@example.com</span> | 
+                    <span id="displayPhone">+92 300 1234567</span>
+                </div>
+                <div class="social-info">
+                    <span id="displayGithub">github.com/username</span> | 
+                    <span id="displayLinkedin">linkedin.com/in/username</span>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="resume-body">
+                <div class="section">
+                    <h3>Professional Summary</h3>
+                    <p id="displaySummary">Passionate developer experienced in building responsive web applications.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Skills</h3>
+                    <ul id="displaySkills" class="skills-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Education</h3>
+                    <div id="educationPreviewContainer"></div>
+                </div>
+
+                <div class="section">
+                    <h3>Work Experience</h3>
+                    <div id="experiencePreviewContainer"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #1e293b;
+  color: white;
+  border-bottom: 1px solid #334155;
+}
+
+.downloadBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.downloadBtn:hover {
+  background: #1d4ed8;
+}
+
+.builder-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+.form-section {
+  background: #1e293b;
+  padding: 1.8rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-section h2 {
+  font-size: 1.1rem;
+  color: #38bdf8;
+  margin-top: 0.8rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.3rem;
+}
+
+.form-section input, 
+.form-section textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #f8fafc;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+.form-section input::placeholder, 
+.form-section textarea::placeholder {
+  color: #64748b;
+}
+
+.form-section input:focus, 
+.form-section textarea:focus {
+  border-color: #38bdf8;
+}
+
+/* Dynamic Field Group Cards */
+.dynamic-group {
+  background: #0f172a;
+  padding: 1rem;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.add-btn {
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.add-btn:hover {
+  background: #0369a1;
+}
+
+.remove-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  float: right;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}
+
+/* Resume Preview Styles */
+.preview-section {
+  background: #ffffff;
+  color: #1e293b;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  min-height: 600px;
+}
+
+.resume-header h1 {
+  color: #0f172a;
+  font-size: 2.2rem;
+}
+
+.job-title {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.contact-info, 
+.social-info {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 0.2rem;
+}
+
+hr {
+  margin: 1.2rem 0;
+  border: 0;
+  border-top: 2px solid #e2e8f0;
+}
+
+.section {
+  margin-bottom: 1.2rem;
+}
+
+.section h3 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.2rem;
+}
+
+.section p {
+  color: #334155;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.preview-item {
+  margin-bottom: 0.8rem;
+}
+
+.preview-item h4 {
+  color: #1e293b;
+  font-size: 0.98rem;
+}
+
+.company-name {
+  font-weight: 600;
+  color: #2563eb;
+  font-size: 0.88rem;
+  margin-bottom: 0.2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.skills-list li {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #bfdbfe;
+}
+
+/* Print Rules */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+  }
+  .builder-container {
+    display: block;
+    padding: 0;
+  }
+  .preview-section {
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
